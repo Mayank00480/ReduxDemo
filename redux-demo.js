@@ -8,6 +8,12 @@ switch(action.type){
     case 'Dec' : return {
         counter : state.counter - 1
     }
+    case  'IncBy2' : return {
+        counter : state.counter + 2
+    } 
+    case 'DecBy2' : return {
+        counter : state.counter - 2
+    }
     default : return state
 }
 }
@@ -24,3 +30,5 @@ store.dispatch({type : 'Inc'})
 store.dispatch({type : 'Inc'})
 store.dispatch({type : 'Dec'})
 store.dispatch({type : 'Mul'})
+store.dispatch({type : 'IncBy2'})
+store.dispatch({type : 'DecBy2'})
